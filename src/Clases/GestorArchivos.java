@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -92,5 +93,41 @@ public class GestorArchivos {
                 
             }   
         }
-    }  
+    } 
+    
+    
+    public void Escribir(String nombreArchivo, DefaultTableModel tabla){
+        FileWriter archivo = null;
+        PrintWriter pw = null;
+        
+        try{
+            archivo = new FileWriter(ruta + "\\" + nombreArchivo);
+            pw = new PrintWriter(archivo);
+            
+            for(int filas = 0; filas< tabla.getRowCount(); filas++){
+                
+                 for(int columnas = 0; columnas< tabla.getColumnCount(); columnas++){
+                     
+                    pw.println(tabla.getValueAt(filas, columnas));
+                }
+            }    
+        }
+        catch(IOException ex){
+        JOptionPane.showMessageDialog(null, ex.getMessage( ));
+        }
+        finally{
+            try{
+                if(null != archivo){
+                    archivo.close();
+                }
+                
+            }
+            catch(IOException ex){
+               JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        }
+    }
+    
 }
+
+
