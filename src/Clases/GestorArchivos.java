@@ -126,8 +126,7 @@ public class GestorArchivos {
                JOptionPane.showMessageDialog(null, ex.getMessage());
             }
         }
-    }
-    
+    }   
 }
 
 
