@@ -38,7 +38,9 @@ public class Administrativo {
         return "producto solicitado";
     }   
    
-   
+   public void ObtenDatos(){
+       
+   }
     
     
     
