@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
-public class ProductoSoftware extends javax.swing.JFrame {
+public class ProductoServicios extends javax.swing.JFrame {
 
     static Object[] objetoFilas = new Object[4];
     GestorArchivos miGestor = new GestorArchivos();
@@ -13,7 +13,7 @@ public class ProductoSoftware extends javax.swing.JFrame {
     private int fila;
     
     
-    public ProductoSoftware(){
+    public ProductoServicios(){
         initComponents();
         configurarTabla();
         cargarArchivo();
@@ -35,7 +35,7 @@ public class ProductoSoftware extends javax.swing.JFrame {
         miTabla.setNumRows(0);
         miTabla.setColumnCount(0);
         configurarTabla();
-        miGestor.TablaArchivo(4,"Mercaderia.txt", miTabla);
+        miGestor.TablaArchivo(4,"Servicios.txt", miTabla);
         TablaProductos.setModel(miTabla);            
     } 
     
@@ -219,10 +219,10 @@ public class ProductoSoftware extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
 
-        getContentPane().add(panelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 790));
+        getContentPane().add(panelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 690));
 
         panelCompra.setBackground(new java.awt.Color(102, 153, 255));
         panelCompra.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Software", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 36), new java.awt.Color(255, 255, 255))); // NOI18N
@@ -249,7 +249,7 @@ public class ProductoSoftware extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TablaProductos);
 
-        panelCompra.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 532, 955, 310));
+        panelCompra.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 532, 850, 160));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("Nombre:");
@@ -334,7 +334,7 @@ public class ProductoSoftware extends javax.swing.JFrame {
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         miTabla.removeRow(fila);
         TablaProductos.setModel(miTabla);
-        miGestor.EscribirEnArchivo("Mercaderia.txt", miTabla);
+        miGestor.EscribirEnArchivo("Servicios.txt", miTabla);
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
@@ -342,7 +342,7 @@ public class ProductoSoftware extends javax.swing.JFrame {
         miTabla.addRow(objetoFilas);
         TablaProductos.setModel(miTabla);
 
-        miGestor.EscribirEnArchivo("Mercaderia.txt", miTabla);
+        miGestor.EscribirEnArchivo("Servicios.txt", miTabla);
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void txtPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioActionPerformed
@@ -408,20 +408,21 @@ public class ProductoSoftware extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ProductoSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductoServicios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ProductoSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductoServicios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ProductoSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductoServicios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ProductoSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductoServicios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ProductoSoftware().setVisible(true);
+                new ProductoServicios().setVisible(true);
             }
         });
     }

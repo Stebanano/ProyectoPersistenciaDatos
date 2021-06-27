@@ -1,0 +1,8 @@
+gtx 900
+5
+Tarjeta Grafica Nvidia
+1000000
+Adata 500 gigas
+45
+Memoria HDD sata 3.5 7900 rpm
+50000

@@ -1,13 +1,13 @@
 package MainClass;
 
-import  Formularios.Login;
+import  Formularios.Home;
 
 public class Main {
     public static void main(String[] args) {
         
-        Login lgn = new Login();
+        Home inicio = new Home();
         
-    lgn.setVisible(true);
+    inicio.setVisible(true);
         
  }  
 }
