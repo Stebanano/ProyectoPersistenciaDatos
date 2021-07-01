@@ -1,11 +1,3 @@
-Windows
-22
-Clave Original
-270000
-McAfee Antivirus
-75
-Suscripcion Anual
-90000
 Tarjeta Regalo eShop
 145
 Tarjeta de recarga Nintendo eShop
@@ -22,3 +14,7 @@ Avast
 56
 Suscripcion un año
 50000
+Windows
+
+
+

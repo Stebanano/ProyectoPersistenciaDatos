@@ -37,8 +37,6 @@ public class Verificador {
         GestorArchivos miGestor = new GestorArchivos();
         int fila;
         
-        
-        
         File archivo = null;
         FileReader fr = null;
         BufferedReader br = null;
@@ -78,14 +76,6 @@ public class Verificador {
             JOptionPane.showMessageDialog(null, e2.getMessage());       
             }
         }
-        
-        
-        
-        
-        
-     
-        
-        
         
         return correcto;
     }
